@@ -1,12 +1,11 @@
 import os
 from dotenv import load_dotenv
 import redis
-import logging
 from time import sleep
+from logger_config import get_module_logger
 
-# 配置日志
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# 获取模块日志记录器
+logger = get_module_logger("redis_utils")
 
 load_dotenv()
 
